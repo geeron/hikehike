@@ -16,7 +16,7 @@ export default function App() {
       <div className="hikes__container">
         <Routes>
           <Route path="/start" element={<DasboardStart />} />
-          <Route path="/finish" element={<Dashboard eventsTest='events'/>} />
+          <Route path="/finish" element={<Dashboard />} />
           <Route path="/hike" element={<StartHike />} />
           <Route path="/submit" element={<SubmitHike />} />
         </Routes>

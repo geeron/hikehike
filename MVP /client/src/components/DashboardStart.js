@@ -3,20 +3,14 @@ import Leaderboard from './Leaderboard';
 import QrCode from './QrCode';
 
 export default function DasboardStart() {
-  const [hikes, setHikes] = useState([]);
 
-  const baseUrl = 'http://192.168.1.156:3001/hikes';
-  const testUrl = 'http://192.168.1.156:3000/hike?title=tibidabo';
+  const testUrl = 'http://192.168.1.156:3000/hike?';
+  const lng = '&lng=2.118184'
+  const lat = '&lat=41.420102'
+  const title = 'title=tibidabo'
+  const start_date = '&start_date=' + Math.floor(Date.now())
 
-  const getHikes = () => {
-    fetch(baseUrl)
-      .then((res) => res.json())
-      .then((data) => setHikes(data));
-  };
 
-  useEffect(() => {
-    getHikes();
-  }, []);
 
   const [date, setDate] = useState(Math.floor(Date.now()));
 
@@ -33,13 +27,13 @@ export default function DasboardStart() {
     <div className="Dashboard__container">
       <div className='Leaderboard'>
         <h2>Leaderboard</h2>
-        <Leaderboard hikes={hikes} setHikes={setHikes}></Leaderboard>
+        <Leaderboard></Leaderboard>
       </div>
       <div className='QR'>
       <h1>START OF HIKE!</h1>
         <p>You can join this hiking trip</p>
         <h2>Scan to start your hike</h2>
-        <QrCode date={testUrl + '&start_date=' + date}></QrCode>
+        <QrCode date={testUrl + title + start_date + lng + lat}></QrCode>
       </div>
     </div>
 

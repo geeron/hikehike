@@ -1,7 +1,9 @@
 import moment from 'moment';
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import Weather from './Weather';
+import Map from './Map';
+import Leaderboard from './Leaderboard';
 
 export default function StartHike() {
   const search = useLocation().search;
@@ -11,16 +13,15 @@ export default function StartHike() {
   localStorage.setItem('title', title);
 
 
+
   return (
-    <div>
+    <div className='StartHike__container'>
       <h2>Trip has started!</h2>
       <h3>Scan QR-code at top of {title} to finish</h3>
-      <p>Current hikers on this path</p>
-      <p>2</p>
       <p>Best time:</p>
-      <p>Sol, 24 min, June 3rd</p>
-
-      <Weather></Weather>
+      <Leaderboard  mobile='true'></Leaderboard>
+      <p>Your route:</p>
+      <Map longitude={new Number(new URLSearchParams(search).get('lng'))} latitude={new Number(new URLSearchParams(search).get('lat'))}></Map>
     </div>
   );
 }

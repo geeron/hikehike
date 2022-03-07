@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import moment from 'moment';
+import exifr from 'exifr'
 
 export default function SubmitHike() {
   const [name, setName] = useState('');
+
+
 
   const search = useLocation().search;
   const title = new URLSearchParams(search).get('title');
@@ -25,8 +27,7 @@ export default function SubmitHike() {
       user: name,
     };
 
-    console.log(body);
-    console.log(JSON.stringify(body));
+
 
     fetch(serverUrl, {
       method: 'POST',
@@ -39,15 +40,13 @@ export default function SubmitHike() {
 
   return (
     <div className="SubmitHike__container">
-      <h2>Submit Your Hike!</h2>
       <h3>Congratulations!</h3>
       <p>
-          You finished the hike to {title.toUpperCase()} in {duration} minutes
-        </p>
-      <form onSubmit={handleSubmit}>
-
+        You finished the hike to {title.toUpperCase()} in {duration} minutes
+      </p>
+      <form className='SubmitHikeForm' onSubmit={handleSubmit}>
         <label for="name">
-        <h4>What is your name:</h4>
+          <h4>What is your name:</h4>
         </label>
         <input
           type="text"
@@ -58,17 +57,31 @@ export default function SubmitHike() {
           required
         />
 
-        <label for="rating"><h4>Rate the trip:</h4></label>
+        <label htmlFor="rating">
+          <h4>Rate the trip:</h4>
+        </label>
         <input type="range" min="1" max="5" id="rating" name="rating"></input>
         <br />
-        <label for="review"><h4>Write your review:</h4></label>
-        <textarea type="comment" rows="5" id="review" name="review"></textarea>
+        <label htmlFor="review">
+          <h4>Write your review:</h4>
+        </label>
+        <textarea type="text" rows="10" id="review" name="review"></textarea>
         <br></br>
-
+        <label htmlFor="photo">
+          <p>Testing photo</p>
+        </label>
+        <input
+          type="file"
+          accept="image/*"
+          capture="camera"
+          id="photo"
+          name="photo"
+        ></input>
+        <br></br>
         <input type="submit" value="Submit Hike" />
-
-
       </form>
+
+      <p>Disclaimer: When you submit, your information<br></br> will be stored and shown on the leaderboard</p>
     </div>
   );
 }
