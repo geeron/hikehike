@@ -1,9 +1,11 @@
 .Hike__container {
-  border-radius: 1em;
-  padding: 1em;
+  display: flex;
+  border: 0.2em solid whitesmoke;
+  border-radius: 2em;
   background-color: whitesmoke;
-  background-image: linear-gradient(rgb(250, 250, 250), whitesmoke);
+  background-image: linear-gradient(#b0ced5, #75b1ad92);
   margin: 1em;
+  padding: 0.5em 1em;
 }
 
 .QR {
@@ -20,24 +22,55 @@
   max-width: 16em;
   min-width: 16em;
   border: 1em solid grey;
-  border-radius: 1em;
+  border-radius: 5em;
 }
 
 .Leaderboard {
   flex: 4;
   padding: 1em;
+  margin: 0 1em;
 }
 
-.Leaderboard > * > * {
-  margin: 1em;
-  padding: 1em;
-}
-
-.Hike__container,
 .QRCode__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.hike-info > div {
+  display: flex;
+  direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hike-info {
+  flex: 5;
+}
+
+.name {
+  height: 50%;
+}
+
+.date {
+  margin-top: -0.5em;
+  height: 50%;
+}
+
+.rank {
+  min-width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: 2em;
+}
+
+.duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .Dashboard__container {
@@ -52,33 +85,119 @@
 .StartHike__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   padding-bottom: 4em;
 }
 
+.StartHike__container > h2 {
+  color: rgb(113, 113, 113);
+}
+
 .Navbar__container {
+  margin-top: 1em;
+  color: #57634e;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 3em;
+}
+
+.Navbar__container > img {
+  height: 100%;
+  margin: 0 1em;
 }
 
 .SubmitHike__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  justify-content: center;
   padding-bottom: 4em;
 }
 
 .SubmitHike__container > * {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   width: 100%;
   padding: 1em 0;
 }
 
 .SubmitHikeForm {
-background-color: aliceblue;
-border-radius: 1em;
+  background-color: #cbe8e5;
+  width: 20em;
+  border-radius: 3em;
+  border: 0.4em solid whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.SubmitHikeForm > input[type='submit'] {
+  color: white;
+  font-size: 1.6em;
+  background-color: #597274;
+  border: 0.2em solid whitesmoke;
+  padding: 0.2em 0.5em;
+  border-radius: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .App__container {
+    width: 23em;
+  }
+}
+.App__container {
+  margin: 0 10px;
+  color: #42444e;
+  overflow: hidden;
+}
+
+.MapReact__container {
+  width: 22em;
+  border: 0.5em solid white;
+  border-radius: 5em;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.nav-buttons {
+  position: fixed;
+  top: 20px;
+}
+
+.trip-info {
+  display: flex;
+  direction: row;
+  justify-content: space-around;
+  color: rgb(97, 97, 97);
+}
+
+.trip-info > div > * {
+  display: flex;
+  justify-content: center;
+}
+
+.trip-info > div > h2 {
+  padding: 1em;
+  border-radius: 1em;
+  border: 0.2em solid rgb(157, 157, 157);
+}
+
+.MapComponent > div {
+  display: flex;
+  direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.hike-start > * {
+  display: flex;
   justify-content: center;
 }
