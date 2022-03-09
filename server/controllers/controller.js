@@ -3,8 +3,7 @@ const db = require('../models/index');
 const getAllHikes = async (req, res) => {
   try {
     const date = Date.now();
-    const result = await db.hike.find({
-    });
+    const result = await db.hike.find({});
     res.status(200);
     res.send(result);
   } catch (error) {
@@ -28,10 +27,10 @@ const submitHike = async (req, res) => {
 
 const deleteHike = async (req, res) => {
   try {
-    const {id} = req.params;
-    const result = await db.hike.create(req.body);
+    const { id } = req.params;
+    const result = await db.hike.deleteOne({ _id: id });
     res.status(201);
-    res.send('post created ' + JSON.stringify(result));
+    res.send('post deleted ' + JSON.stringify(body));
   } catch (error) {
     console.log(error);
     res.status(400);
@@ -54,5 +53,6 @@ const deleteHikes = async (req, res) => {
 module.exports = {
   getAllHikes,
   submitHike,
-  deleteHikes
+  deleteHike,
+  deleteHikes,
 };

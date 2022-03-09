@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
-body {
-  height: 100%;
-  font-family: 'Hubballi', cursive;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(#b9c7cd92, #b0d5cc);
-}

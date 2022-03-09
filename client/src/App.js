@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import SubmitHike from './components/SubmitHike';
+import Navbar from './components/Navbar';
+import Dashboard from './components/Dashboard';
+import DasboardStart from './components/DashboardStart';
+import StartHike from './components/StartHike';
 
-function App() {
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App__container">
+      <Navbar></Navbar>
+      <div className="hikes__container">
+        <Routes>
+          <Route path="/start" element={<DasboardStart />} />
+          <Route path="/finish" element={<Dashboard />} />
+          <Route path="/hike" element={<StartHike />} />
+          <Route path="/submit" element={<SubmitHike />} />
+        </Routes>
+      </div>
     </div>
+
   );
 }
-
-export default App;
