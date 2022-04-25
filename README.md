@@ -32,7 +32,7 @@ HikeHike is a fullstack-application that lets users get on hiking-leaderboards, 
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+![](https://github.com/geeron/hikehike/HikeHike.gif)
 </div>
 
 
