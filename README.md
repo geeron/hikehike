@@ -1,7 +1,4 @@
 
-# HikeHike
-### by Geeron
-
 <!-- Table of Contents -->
 # :notebook_with_decorative_cover: Table of Contents
 
@@ -33,7 +30,6 @@ HikeHike is a fullstack-application that lets users get on hiking-leaderboards, 
 
 <div align="center"> 
  <img src="https://github.com/geeron/hikehike/blob/main/HikeHike.gif" alt="showcase"/>
-![ ](https://github.com/geeron/hikehike/blob/main/HikeHike.gif)
 </div>
 
 
@@ -124,20 +120,6 @@ Start the server
 
 
 
-<!-- Usage -->
-## :eyes: Usage
-
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
-
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
 <!-- Roadmap -->
 ## :compass: Roadmap
 
@@ -153,11 +135,6 @@ function App() {
   + I wanted to learn more about qr-codes, what information you can store in them, and also the psychological part behind dynamic (moving) qr-codes. It has been an interesting learning-process.
 
 
-
-<!-- License -->
-## :warning: License
-
-Distributed under MIT License. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
