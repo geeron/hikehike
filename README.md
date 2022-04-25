@@ -32,7 +32,8 @@ HikeHike is a fullstack-application that lets users get on hiking-leaderboards, 
 ### :camera: Screenshots
 
 <div align="center"> 
-![](https://github.com/geeron/hikehike/blob/main/HikeHike.gif)
+ <img src="https://github.com/geeron/hikehike/blob/main/HikeHike.gif" alt="showcase"/>
+![ ](https://github.com/geeron/hikehike/blob/main/HikeHike.gif)
 </div>
 
 
